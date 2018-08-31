@@ -34,8 +34,24 @@ python clean --mode add  --type btmp --user root --tty "pts/7" --date "2017-8-2 
 4. 伪造lastlog记录
 python clean --mode add --type=lastlog --user=rootclay --date="2017-7-24 14:22:07" --tty "pts/2" --host "127.0.0.1" //伪造用户为rootclay 时间2017-7-24 14:22:07 来源登录ip为127.0.0.1的用户登录记录
 
+3,wipe 
 
-3，端口扫描
+wget -c https://raw.githubusercontent.com/sunlewuyou/SH/master/wipe
+
+UTMP editing:
+    Erase all usernames      :   wipe u [username]
+    Erase one username on tty:   wipe u [username] [tty]
+
+WTMP editing:
+   Erase last entry for user :   wipe w [username]
+   Erase last entry on tty   :   wipe w [username] [tty]
+
+LASTLOG editing:
+   Blank lastlog for user    :   wipe l [username]
+   Alter lastlog entry       :   wipe l [username] [tty] [time] [host]
+	Where [time] is in the format [YYMMddhhmm]
+
+4，端口扫描
 
 wget -c https://raw.githubusercontent.com/sunlewuyou/SH/master/portscan
 
