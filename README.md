@@ -34,3 +34,12 @@ python clean --mode add  --type btmp --user root --tty "pts/7" --date "2017-8-2 
 4. 伪造lastlog记录
 python clean --mode add --type=lastlog --user=rootclay --date="2017-7-24 14:22:07" --tty "pts/2" --host "127.0.0.1" //伪造用户为rootclay 时间2017-7-24 14:22:07 来源登录ip为127.0.0.1的用户登录记录
 
+
+3，端口扫描
+
+wget -c https://raw.githubusercontent.com/sunlewuyou/SH/master/portscan
+
+使用：python portscan，然后输入需要扫描的IP即可。
+
+其他语句查看指定端口占用情况：netstat -tunlp | grep 80
+
