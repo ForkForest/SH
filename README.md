@@ -1,4 +1,4 @@
-# SH
+# linux sh
 我的 Linux 脚本
 
 1、安装AutoSSH
